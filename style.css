@@ -1,0 +1,218 @@
+/* Paleta de colores
+#12100f
+#123d54
+#e48e15
+#eacd4b
+#f6ed9f
+*/
+
+/*--- CSS body:header ---*/
+body a {
+    text-decoration: none;
+}
+
+body {
+    background-color: black;
+    margin-top:70px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.bg-navbar {
+    background-color: #123d54;
+}
+.nav-link {
+    color: #e48e15 !important;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+    padding: 8px 16px !important;
+}
+.nav-link:hover {
+    transform: scale(1.1);
+    color: #e48e15;
+}
+.nav-link:active {
+    transform: scale(0.6);
+}
+.dropdown-menu {
+    background-color: #123d54;
+}
+.dropdown-item {
+    color: #e48e15;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+.dropdown-item:hover {
+    background-color: #e48e15;
+    color: #123d54;
+    transform: scale (1.1);
+}
+.dropdown-item:active {
+    color:#e48e15;
+    transform: scale(0.6);
+}
+.nav-link.dropdown-toggle.show {
+    color:#e48e15;
+}
+/* Resaltador de pedidos */
+.nav-item-bold {
+    background-color: #e48e15;
+    color:#123d54 !important;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px auto;
+    transition: all 0.3s ease-in-out;
+}
+.nav-link-bold {
+    color: #123d54 !important;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.5rem ;
+}
+.nav-item-bold:hover {
+    transform: scale(1.05);
+}
+/* Hover para logo en Navbar */
+.container {
+    transition: all 0.3s ease-in-out;
+}
+.container:hover {
+    transform: scale(1.1);
+}
+.container:active {
+    transform: scale(0.6);
+}
+/*---CSS Body:main---*/
+
+/*Carrousel*/
+.w-100 {
+    width: 100% !important;
+    height: 80%;
+}
+
+/*Hub productos*/
+.title-hub {
+    color: silver;
+    font-size: xx-large;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contenedor {
+    background-image: url(images/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 0;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.img-contenedor {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/*Overlay del hub*/
+.img-overlay {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: silver;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.img-overlay:hover .overlay {
+    opacity: 1;
+}
+
+.img-overlay:hover .img-contenedor {
+    filter: brightness(50%);
+    transform: scale(1.05);
+}
+
+/*CSS Body:footer*/
+.logohome{
+    padding: 8px 8px;
+    width: 20%;
+    height: auto;
+}
+
+#title-foot {
+    font-size: 150%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: silver;
+}
+
+.contenedor-foot {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 50px;
+}
+
+.columna-foot {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.columna-foot p,
+.columna-foot a {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    text-decoration: none;
+    color: silver;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 80%;
+    display: inline-block;
+    transition: all 0.6s ease-in-out;
+}
+
+.columna-foot a:hover {
+    color: #e48e15;
+    transform: translateX(4px);
+}
