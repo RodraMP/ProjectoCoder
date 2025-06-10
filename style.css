@@ -25,7 +25,7 @@ body {
     z-index: 1000;
 }
 .bg-navbar {
-    background-color: #123d54;
+    background-color: rgba(0, 0, 0, 0.89);
 }
 .nav-link {
     color: #e48e15 !important;
@@ -41,7 +41,7 @@ body {
     transform: scale(0.6);
 }
 .dropdown-menu {
-    background-color: #123d54;
+    background-color: black;
 }
 .dropdown-item {
     color: #e48e15;
@@ -50,7 +50,7 @@ body {
 }
 .dropdown-item:hover {
     background-color: #e48e15;
-    color: #123d54;
+    color: black;
     transform: scale (1.1);
 }
 .dropdown-item:active {
@@ -63,7 +63,7 @@ body {
 /* Resaltador de pedidos */
 .nav-item-bold {
     background-color: #e48e15;
-    color:#123d54 !important;
+    color:black !important;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -72,7 +72,7 @@ body {
     transition: all 0.3s ease-in-out;
 }
 .nav-link-bold {
-    color: #123d54 !important;
+    color: black !important;
     transition: all 0.3s ease-in-out;
     font-size: 1.2rem;
     padding: 0.5rem 0.5rem ;
@@ -91,7 +91,28 @@ body {
     transform: scale(0.6);
 }
 /*---CSS Body:main---*/
-
+main {
+    position:relative;
+    background-image: url(images/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+main::before {
+    content:"";
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+main > * {
+    position: relative;
+    z-index: 2;
+}
 /*Carrousel*/
 .w-100 {
     width: 100% !important;
@@ -107,14 +128,10 @@ body {
 }
 
 .contenedor {
-    background-image: url(images/fondo.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin: 0;
+    margin: 5px;
 }
 
 .columna {
