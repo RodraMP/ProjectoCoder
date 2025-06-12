@@ -295,3 +295,7 @@ main>* {
     --bs-btn-disabled-bg: #0d6efd;
     --bs-btn-disabled-border-color: #0d6efd;
 }
+
+.colcentrada {
+    align-items: center !important;
+}
