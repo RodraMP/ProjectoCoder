@@ -296,6 +296,37 @@ main>* {
     --bs-btn-disabled-border-color: #0d6efd;
 }
 
-.colcentrada {
-    align-items: center !important;
+/* Sobre nosotros - Grid */
+
+.contenedornosotros {
+    display:grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto;
+    column-gap: 20px;
+    padding: 20px;
+    background-color: transparent;
+    align-items: start;
+    
 }
+.text-nosotros {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: silver;
+    font-size: 20px;
+}
+.contenedornosotros > div {
+    text-align: justify;
+    padding:0 10px;   
+}
+.img-logo-nosotros {
+    max-width: 100%;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+.item3nos {
+    grid-column: 1 / span 2; 
+ }
