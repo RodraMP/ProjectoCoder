@@ -157,12 +157,16 @@ main>* {
     justify-content: center;
     gap: 50px;
     margin: 5px;
+    flex-wrap: wrap;
 }
 
 .columna {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
 }
 
 .img-contenedor {
@@ -228,8 +232,11 @@ main>* {
     background-color: black;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     padding: 20px;
-    gap: 50px;
+    gap: 30px;
+    text-align: center;
 }
 
 .columna-foot {
@@ -259,10 +266,11 @@ main>* {
     transform: translateX(4px);
 }
 
-.cursive { 
+.cursive {
     font-style: italic;
     color: rgba(37, 37, 37, 0.856);
 }
+
 /* Modal en Productos - Bootstrap*/
 .modal-content {
     position: relative;
@@ -287,7 +295,7 @@ main>* {
     --bs-btn-hover-bg: #e48e15;
     --bs-btn-hover-border-color: #e48e15;
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-color:#e48e15;
+    --bs-btn-active-color: #e48e15;
     --bs-btn-active-bg: black;
     --bs-btn-active-border-color: black;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -299,25 +307,28 @@ main>* {
 /* Sobre nosotros - Grid */
 
 .contenedornosotros {
-    display:grid;
+    display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: auto auto;
     column-gap: 20px;
     padding: 20px;
     background-color: transparent;
     align-items: start;
-    
+
 }
+
 .text-nosotros {
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
     color: silver;
     font-size: 20px;
 }
-.contenedornosotros > div {
+
+.contenedornosotros>div {
     text-align: justify;
-    padding:0 10px;   
+    padding: 0 10px;
 }
+
 .img-logo-nosotros {
     max-width: 100%;
     max-height: 200px;
@@ -327,6 +338,89 @@ main>* {
     display: block;
     margin: 0 auto;
 }
+
 .item3nos {
-    grid-column: 1 / span 2; 
- }
+    grid-column: 1 / span 2;
+}
+
+/* Media Query */
+
+/* Footer */
+@media (max-width:768px) {
+    .contenedor-foot {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 30px 10px;
+    }
+
+    .columna-foot {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .logohome {
+        width: 20%;
+    }
+
+    #title-foot {
+        font-size: 110%;
+    }
+
+    .columna-foot p,
+    .columna-foot a {
+        font-size: 80%;
+    }
+}
+
+/* Index Hub */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 10px;
+    }
+
+    .columna {
+        width: 90%;
+        max-width: none;
+    }
+
+    .title-hub {
+        font-size: 1.5rem;
+        margin: 30px 0 10px;
+    }
+
+    .overlay {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+/* Sobre nosotros */
+@media (max-width: 768px) {
+    .contenedornosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 20px;
+        gap: 5px;
+    }
+
+    .contenedornosotros>div {
+        padding: 0;
+        text-align: justify;
+    }
+    .img-logo-nosotros {
+        max-height: 150px;
+    }
+    .text-nosotros {
+        font-size:14px;
+        text-align:center;
+    }
+    .item3nos {
+        grid-column: auto;
+        width: 100%;
+    }
+}
