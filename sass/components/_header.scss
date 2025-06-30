@@ -1,0 +1,101 @@
+@import "variables";
+
+/*--- CSS body:header ---*/
+body a {
+    text-decoration: none;
+}
+
+body {
+    background-color: $bg-color;
+    margin-top: 70px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.bg-navbar {
+    background-color: rgba(0, 0, 0, 0.89);
+}
+
+.nav-link {
+    color: #e48e15 !important;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+    padding: 8px 16px !important;
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+    color: #e48e15;
+}
+
+.nav-link:active {
+    transform: scale(0.6);
+}
+
+.dropdown-menu {
+    background-color: $bg-color;
+}
+
+.dropdown-item {
+    color: $fontColor;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.dropdown-item:hover {
+    background-color: $fontColor;
+    color: $bg-color;
+    transform: scale(1.1);
+}
+
+.dropdown-item:active {
+    color: $fontColor;
+    transform: scale(0.6);
+}
+
+.nav-link.dropdown-toggle.show {
+    color: $fontColor;
+}
+
+/* Resaltador de pedidos - All Navbar */
+.nav-item-bold {
+    background-color: #e48e15;
+    color: black !important;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link-bold {
+    color: $bg-color !important;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.5rem;
+}
+
+.nav-item-bold:hover {
+    transform: scale(1.05);
+}
+
+/* Hover para logo en All Navbar */
+.container {
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.1);
+}
+
+.container:active {
+    transform: scale(0.6);
+}

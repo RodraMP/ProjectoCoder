@@ -1,0 +1,422 @@
+/* Paleta de colores
+#12100f
+#123d54
+#e48e15
+#eacd4b
+#f6ed9f
+*/
+/* Variables */
+/* Mixin */
+/* Correcciones de bootstrap */
+/* Pantalla que ocultaba los modals */
+.modal-backdrop.show {
+  opacity: var(--bs-backdrop-opacity);
+  z-index: -1;
+}
+
+/*--- CSS body:header ---*/
+body a {
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+  margin-top: 70px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.bg-navbar {
+  background-color: rgba(0, 0, 0, 0.89);
+}
+
+.nav-link {
+  color: #e48e15 !important;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.2rem;
+  padding: 8px 16px !important;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+  color: #e48e15;
+}
+
+.nav-link:active {
+  transform: scale(0.6);
+}
+
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-item {
+  color: #e48e15;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.dropdown-item:hover {
+  background-color: #e48e15;
+  color: black;
+  transform: scale(1.1);
+}
+
+.dropdown-item:active {
+  color: #e48e15;
+  transform: scale(0.6);
+}
+
+.nav-link.dropdown-toggle.show {
+  color: #e48e15;
+}
+
+/* Resaltador de pedidos - All Navbar */
+.nav-item-bold {
+  background-color: #e48e15;
+  color: black !important;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link-bold {
+  color: black !important;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.nav-item-bold:hover {
+  transform: scale(1.05);
+}
+
+/* Hover para logo en All Navbar */
+.container {
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.1);
+}
+
+.container:active {
+  transform: scale(0.6);
+}
+
+/*---CSS All Body:main---*/
+main {
+  position: relative;
+  background-image: url(images/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+main > * {
+  position: relative;
+  z-index: 2;
+}
+
+/*Carrousel - Index*/
+.w-100 {
+  width: 100% !important;
+  height: 80%;
+}
+
+#carouselExampleRide {
+  margin-top: 50px;
+}
+
+/*Hub productos - Index*/
+.title-hub {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: silver;
+  margin: 25px;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 5px;
+  flex-wrap: wrap;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  align-items: center;
+}
+
+.img-contenedor {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/*Overlay del hub - Index */
+.img-overlay {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: silver;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.img-overlay:hover .overlay {
+  opacity: 1;
+}
+
+.img-overlay:hover .img-contenedor {
+  filter: brightness(50%);
+  transform: scale(1.05);
+}
+
+/*CSS All Body:footer*/
+.logohome {
+  padding: 8px 8px;
+  width: 20%;
+  height: auto;
+}
+
+#title-foot {
+  font-size: 150%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  color: silver;
+}
+
+.contenedor-foot {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 30px;
+  text-align: center;
+}
+
+.columna-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  text-align: center;
+}
+
+.columna-foot p,
+.columna-foot a {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  text-decoration: none;
+  color: silver;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 80%;
+  display: inline-block;
+  transition: all 0.6s ease-in-out;
+}
+
+.columna-foot a:hover {
+  color: #e48e15;
+  transform: translateX(4px);
+}
+
+.cursive {
+  font-style: italic;
+  color: rgba(37, 37, 37, 0.856);
+}
+
+/* Modal en Productos - Bootstrap*/
+.modal-content {
+  position: relative;
+  display: flex;
+  transform: translate(0, 50%);
+  flex-direction: column;
+  width: 100%;
+  color: var(--bs-modal-color);
+  pointer-events: auto;
+  background-color: var(--bs-modal-bg);
+  background-clip: padding-box;
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+  border-radius: var(--bs-modal-border-radius);
+  outline: 0;
+}
+
+.btn-primary {
+  --bs-btn-color: #e48e15;
+  --bs-btn-bg: black;
+  --bs-btn-border-color: black;
+  --bs-btn-hover-color: black;
+  --bs-btn-hover-bg: #e48e15;
+  --bs-btn-hover-border-color: #e48e15;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #e48e15;
+  --bs-btn-active-bg: black;
+  --bs-btn-active-border-color: black;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #0d6efd;
+  --bs-btn-disabled-border-color: #0d6efd;
+}
+
+/* Sobre nosotros - Grid */
+.contenedornosotros {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto auto;
+  column-gap: 20px;
+  padding: 20px;
+  background-color: transparent;
+  align-items: start;
+}
+
+.text-nosotros {
+  font-style: italic;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: silver;
+  font-size: 20px;
+}
+
+.contenedornosotros > div {
+  text-align: justify;
+  padding: 0 10px;
+}
+
+.img-logo-nosotros {
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.item3nos {
+  grid-column: 1/span 2;
+}
+
+/* Media Query */
+/* Footer */
+@media (max-width: 768px) {
+  .contenedor-foot {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 10px;
+  }
+  .columna-foot {
+    max-width: 100%;
+    width: 100%;
+  }
+  .logohome {
+    width: 20%;
+  }
+  #title-foot {
+    font-size: 110%;
+  }
+  .columna-foot p,
+  .columna-foot a {
+    font-size: 80%;
+  }
+}
+/* Index Hub */
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+  }
+  .columna {
+    width: 90%;
+    max-width: none;
+  }
+  .title-hub {
+    font-size: 1.5rem;
+    margin: 30px 0 10px;
+  }
+  .overlay {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+/* Sobre nosotros */
+@media (max-width: 768px) {
+  .contenedornosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    gap: 5px;
+  }
+  .contenedornosotros > div {
+    padding: 0;
+    text-align: justify;
+  }
+  .img-logo-nosotros {
+    max-height: 150px;
+  }
+  .text-nosotros {
+    font-size: 14px;
+    text-align: center;
+  }
+  .item3nos {
+    grid-column: auto;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

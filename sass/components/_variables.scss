@@ -1,0 +1,25 @@
+$rgFont: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$bg-color: black;
+$bg-hover-color: #e48e15;
+$titleColor: silver;
+$fontColor: #e48e15;
+$font-hover-color: black;
+$hoverFontColor: #e48e15;
+
+/* Mixin */
+@mixin regularFont {
+    font-family: $rgFont;
+}
+
+@mixin titleFont {
+    font-family: $rgFont;
+    color: $titleColor;
+}
+
+/* Paleta de colores
+#12100f
+#123d54
+#e48e15
+#eacd4b
+#f6ed9f
+*/

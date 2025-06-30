@@ -1,0 +1,133 @@
+@import "variables";
+
+/*---CSS All Body:main---*/
+main {
+    position: relative;
+    background-image: url(images/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+main>* {
+    position: relative;
+    z-index: 2;
+}
+
+/*Carrousel - Index*/
+.w-100 {
+    width: 100% !important;
+    height: 80%;
+}
+
+#carouselExampleRide {
+    margin-top: 50px;
+}
+
+/*Hub productos - Index*/
+.title-hub {
+    @include titleFont;
+    margin: 25px;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 5px;
+    flex-wrap: wrap;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
+}
+
+.img-contenedor {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/*Overlay del hub - Index */
+.img-overlay {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: silver;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    font-family: $rgFont;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.img-overlay:hover .overlay {
+    opacity: 1;
+}
+
+.img-overlay:hover .img-contenedor {
+    filter: brightness(50%);
+    transform: scale(1.05);
+}
+
+/* Media query */
+/* Index Hub */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 10px;
+    }
+
+    .columna {
+        width: 90%;
+        max-width: none;
+    }
+
+    .title-hub {
+        font-size: 1.5rem;
+        margin: 30px 0 10px;
+    }
+
+    .overlay {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,89 @@
+@import "variables";
+
+/*CSS All Body:footer*/
+.logohome {
+    padding: 8px 8px;
+    width: 20%;
+    height: auto;
+}
+
+#title-foot {
+    font-size: 150%;
+    font-family: $rgFont;
+    font-weight: bold;
+    color: $titleColor;
+}
+
+.contenedor-foot {
+    background-color: $bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 30px;
+    text-align: center;
+}
+
+.columna-foot {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.columna-foot p,
+.columna-foot a {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    text-decoration: none;
+    color: $titleColor;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 80%;
+    display: inline-block;
+    transition: all 0.6s ease-in-out;
+}
+
+.columna-foot a:hover {
+    color: $hoverFontColor;
+    transform: translateX(4px);
+}
+
+.cursive {
+    font-style: italic;
+    color: rgba(37, 37, 37, 0.856);
+}
+
+
+/* Media Query */
+
+/* Footer */
+@media (max-width:768px) {
+    .contenedor-foot {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 30px 10px;
+    }
+
+    .columna-foot {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .logohome {
+        width: 20%;
+    }
+
+    #title-foot {
+        font-size: 110%;
+    }
+
+    .columna-foot p,
+    .columna-foot a {
+        font-size: 80%;
+    }
+}
