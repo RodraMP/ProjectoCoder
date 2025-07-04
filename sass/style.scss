@@ -1,5 +1,3 @@
-@use "./components/animations";
-
 @use "./components/header";
 
 @use "./components/index";
@@ -7,5 +5,7 @@
 @use "./components/general";
 
 @use "./components/footer.scss";
+
+@use "./components/animations";
 
 @use "./components/variables";

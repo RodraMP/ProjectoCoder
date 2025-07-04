@@ -1,3 +1,4 @@
+/* Mixin */
 /* Paleta de colores
 #12100f
 #123d54
@@ -5,15 +6,6 @@
 #eacd4b
 #f6ed9f
 */
-/* Variables */
-/* Mixin */
-/* Correcciones de bootstrap */
-/* Pantalla que ocultaba los modals */
-.modal-backdrop.show {
-  opacity: var(--bs-backdrop-opacity);
-  z-index: -1;
-}
-
 /*--- CSS body:header ---*/
 body a {
   text-decoration: none;
@@ -114,6 +106,14 @@ body {
   transform: scale(0.6);
 }
 
+/* Mixin */
+/* Paleta de colores
+#12100f
+#123d54
+#e48e15
+#eacd4b
+#f6ed9f
+*/
 /*---CSS All Body:main---*/
 main {
   position: relative;
@@ -221,61 +221,41 @@ main > * {
   transform: scale(1.05);
 }
 
-/*CSS All Body:footer*/
-.logohome {
-  padding: 8px 8px;
-  width: 20%;
-  height: auto;
+/* Media query */
+/* Index Hub */
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+  }
+  .columna {
+    width: 90%;
+    max-width: none;
+  }
+  .title-hub {
+    font-size: 1.5rem;
+    margin: 30px 0 10px;
+  }
+  .overlay {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
 }
-
-#title-foot {
-  font-size: 150%;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-weight: bold;
-  color: silver;
-}
-
-.contenedor-foot {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 20px;
-  gap: 30px;
-  text-align: center;
-}
-
-.columna-foot {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 350px;
-  text-align: center;
-}
-
-.columna-foot p,
-.columna-foot a {
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  font-size: 16px;
-  text-decoration: none;
-  color: silver;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 80%;
-  display: inline-block;
-  transition: all 0.6s ease-in-out;
-}
-
-.columna-foot a:hover {
-  color: #e48e15;
-  transform: translateX(4px);
-}
-
-.cursive {
-  font-style: italic;
-  color: rgba(37, 37, 37, 0.856);
+/* Mixin */
+/* Paleta de colores
+#12100f
+#123d54
+#e48e15
+#eacd4b
+#f6ed9f
+*/
+/* Correcciones de bootstrap */
+/* Pantalla que ocultaba los modals */
+.modal-backdrop.show {
+  opacity: var(--bs-backdrop-opacity);
+  z-index: -1;
 }
 
 /* Modal en Productos - Bootstrap*/
@@ -348,51 +328,7 @@ main > * {
   grid-column: 1/span 2;
 }
 
-/* Media Query */
-/* Footer */
-@media (max-width: 768px) {
-  .contenedor-foot {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 30px 10px;
-  }
-  .columna-foot {
-    max-width: 100%;
-    width: 100%;
-  }
-  .logohome {
-    width: 20%;
-  }
-  #title-foot {
-    font-size: 110%;
-  }
-  .columna-foot p,
-  .columna-foot a {
-    font-size: 80%;
-  }
-}
-/* Index Hub */
-@media (max-width: 768px) {
-  .contenedor {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding: 10px;
-  }
-  .columna {
-    width: 90%;
-    max-width: none;
-  }
-  .title-hub {
-    font-size: 1.5rem;
-    margin: 30px 0 10px;
-  }
-  .overlay {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-}
+/* Media query */
 /* Sobre nosotros */
 @media (max-width: 768px) {
   .contenedornosotros {
@@ -418,5 +354,128 @@ main > * {
     width: 100%;
   }
 }
+/* Mixin */
+/* Paleta de colores
+#12100f
+#123d54
+#e48e15
+#eacd4b
+#f6ed9f
+*/
+/*CSS All Body:footer*/
+.logohome {
+  padding: 8px 8px;
+  width: 20%;
+  height: auto;
+  animation: rotacionLogo 5s linear infinite;
+}
+
+#title-foot {
+  font-size: 150%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  color: silver;
+}
+
+.contenedor-foot {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 30px;
+  text-align: center;
+}
+
+.columna-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  text-align: center;
+}
+
+.columna-foot p,
+.columna-foot a {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  text-decoration: none;
+  color: silver;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 80%;
+  display: inline-block;
+  transition: all 0.6s ease-in-out;
+}
+
+.columna-foot a:hover {
+  color: #e48e15;
+  transform: translateX(4px);
+}
+
+.cursive {
+  font-style: italic;
+  color: rgba(37, 37, 37, 0.856);
+}
+
+/* Media Query */
+/* Footer */
+@media (max-width: 768px) {
+  .contenedor-foot {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 10px;
+  }
+  .columna-foot {
+    max-width: 100%;
+    width: 100%;
+  }
+  .logohome {
+    width: 20%;
+  }
+  #title-foot {
+    font-size: 110%;
+  }
+  .columna-foot p,
+  .columna-foot a {
+    font-size: 80%;
+  }
+}
+/* Mixin */
+/* Paleta de colores
+#12100f
+#123d54
+#e48e15
+#eacd4b
+#f6ed9f
+*/
+@keyframes rotacionLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Mixin */
+/* Paleta de colores
+#12100f
+#123d54
+#e48e15
+#eacd4b
+#f6ed9f
+*/
 
 /*# sourceMappingURL=style.css.map */
