@@ -57,24 +57,42 @@
             <div class="contactHeader">
                 <h2>TIENDA GRAFICA EN MONTE GRANDE</h2>
             </div>
-            <div class="contactMenu"><a href="https://wa.link/4bql5b">WhatsApp</a><br><a href="#">Link 2</a><br><a
-                    href="#">Link 3</a></div>
+            <div class="contactMenu">
+                <h3>Nuestras redes</h3>
+                <a href="https://wa.link/4bql5b" target="_blank"><img class="simpleIcon"
+                        src="../images/icons/iconWhatsApp.png" alt="Logo de WhatsApp"></a>
+                <br>
+                <a href="https://www.instagram.com/" target="_blank"><img class="simpleIcon"
+                        src="../images/icons/iconInstagram.png" alt="Logo de Instagram"></a>
+                <br>
+                <a href="https://www.facebook.com/" target="_blank"><img class="simpleIcon"
+                        src="../images/icons/iconFacebook.png" alt="Logo de Facebook"></a>
+                <br>
+                <div class="reviewContainer"><a href="https://g.page/r/CYHs5mTo-k74EAE/review" target="_blank">Dejanos
+                        tu
+                        opinion
+                        sobre el servicio
+                        que brinda este local
+                        y ayudanos a mejorar.
+                        ¡Muchas gracias!</a>
+                </div>
+            </div>
             <div class="contactContent">
                 <h3>PEDIDO DE TRABAJO</h3>
                 <div class="row">
-                    <div class="col mb-2">
-                        <input type="text" class="form-control" placeholder="Nombre o Empresa" aria-label="First name">
+                    <div class="col mb-2 ">
+                        <input type="text" class="form-control formControl" placeholder="Nombre o Empresa" aria-label="First name">
                     </div>
                     <div class="col mb-2">
-                        <input type="text" class="form-control" placeholder="E-mail" aria-label="E-mail">
+                        <input type="text" class="form-control formControl" placeholder="E-mail" aria-label="E-mail">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col mb-2">
-                        <input type="text" class="form-control" placeholder="Telefono" aria-label="Telefono">
+                        <input type="text" class="form-control formControl" placeholder="Telefono" aria-label="Telefono">
                     </div>
                     <div class="col mb-2">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select formControl" aria-label="Default select example">
                             <option selected>Eliga su producto</option>
                             <option value="1">Impresion Digital</option>
                             <option value="2">Impresion Gran Formato</option>
@@ -85,17 +103,17 @@
                 </div>
                 <div class="row">
                     <div class="col mb-2">
-                        <input type="text" class="form-control" placeholder="Medidas" aria-label="Medidas">
+                        <input type="text" class="form-control formControl" placeholder="Medidas" aria-label="Medidas">
                     </div>
                     <div class="col mb-2">
-                        <input type="text" class="form-control" placeholder="Material" aria-label="Material">
+                        <input type="text" class="form-control formControl" placeholder="Material" aria-label="Material">
                     </div>
                     <div class="mb-2">
-                        <input class="form-control" type="file" id="formFile" placeholder="ADJUNTAR ARCHIVO">
+                        <input class="form-control formControl" type="file" id="formFile" placeholder="ADJUNTAR ARCHIVO">
                     </div>
                 </div>
                 <div class="mb-2">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    <textarea class="form-control formControl" id="exampleFormControlTextarea1" rows="3"
                         placeholder="Deje su comentario..."></textarea>
                 </div>
                 <!-- Bootsrap modal -->
@@ -107,7 +125,7 @@
                 <div class="modal fade" id="pedirTrabajo" data-bs-backdrop="static" data-bs-keyboard="false"
                     tabindex="-10" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content modalContact">
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="staticBackdropLabel">¡PEDIDO REALIZADO!</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -115,11 +133,11 @@
                             </div>
                             <div class="modal-body">
                                 <ul class="list-group">
-                                    <li class="list-group-item">
+                                    <li class="list-group-item modalItemContact">
                                         <p class="cursive">En breve sera contactado por un miembro de nuestro equipo
                                             para asesoramiento.</p>
                                     </li>
-                                    <li class="list-group-item">¡Gracias por confiar en Imprenta Melga!</li>
+                                    <li class="list-group-item modalItemContact">¡Gracias por confiar en Imprenta Melga!</li>
                                 </ul>
                             </div>
                         </div>
@@ -130,7 +148,10 @@
         </div>
         <div class="contactFooter">
             <div class="contactMapContainer">
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.41720493793!2d-58.451865823474584!3d-34.82060146898605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd34336532f8b%3A0xf84efae864e6ec81!2sRM%20Industrial!5e0!3m2!1ses!2sar!4v1752785895189!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.41720493793!2d-58.451865823474584!3d-34.82060146898605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd34336532f8b%3A0xf84efae864e6ec81!2sRM%20Industrial!5e0!3m2!1ses!2sar!4v1752785895189!5m2!1ses!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </main>
@@ -138,13 +159,13 @@
     <footer>
         <div class="contenedor-foot">
             <div class="columna-foot">
-                <a href="index.html"><img class="logohome img-fluid" src="../images/Logo.png" alt="Logo imprenta"></a>
+                <a href="../index.html"><img class="logohome img-fluid" src="../images/Logo.png" alt="Logo imprenta"></a>
             </div>
             <div class="columna-foot">
                 <p id="title-foot">Links del sitio</p>
                 <a href="https://www.instagram.com/" target="_blank">Instagram</a>
                 <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-                <a href="./pages/contacto.html">Pedidos On-line</a>
+                <a href="#">Pedidos On-line</a>
                 <a href="#">Envio de archivos pesados</a>
             </div>
             <div class="columna-foot">

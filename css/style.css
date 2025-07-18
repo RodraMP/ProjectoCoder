@@ -364,16 +364,18 @@ main > * {
 */
 .contactContainer {
   display: grid;
-  grid-template-areas: "header header" "menu content" "footer footer";
+  grid-template-areas: "header header" "menu content" "menu footer";
   grid-template-columns: 1fr 3fr;
   margin-top: 100px;
   gap: 5px;
-  background-color: white;
+  background-color: black;
   padding: 5px;
 }
 
 .contactContainer > div {
-  background-color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: silver;
+  background-color: black;
   padding: 10px;
   margin: 15px;
 }
@@ -381,11 +383,17 @@ main > * {
 .contactContainer > div.contactHeader {
   grid-area: header;
   text-align: center;
-  color: cyan;
 }
 
 .contactContainer > div.contactMenu {
   grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
 }
 
 .contactContainer > div.contactContent {
@@ -412,6 +420,57 @@ iframe {
   border: none;
 }
 
+.reviewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 180px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.reviewContainer p,
+.reviewContainer a {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  text-decoration: none;
+  color: silver;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: inline-block;
+  transition: all 0.6s ease-in-out;
+}
+
+.reviewContainer a:hover {
+  color: #e48e15;
+  transform: translateX(4px);
+}
+
+.modalContact {
+  background-color: silver;
+  color: #e48e15;
+}
+
+.modalItemContact {
+  background-color: silver;
+  color: black;
+}
+
+.formControl {
+  background-color: grey;
+  border-color: #e48e15;
+  color: #e48e15;
+  transition: background-color 0.3s ease;
+}
+
+.formControl:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: silver !important;
+  border-color: #e48e15 !important;
+  color: black !important;
+}
+
 /* Mixin */
 /* Paleta de colores
 #12100f
@@ -426,6 +485,19 @@ iframe {
   width: 20%;
   height: auto;
   animation: rotacionLogo 5s linear infinite;
+}
+
+.simpleIcon {
+  padding: 8px 8px;
+  width: 75px;
+  height: auto;
+  filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.3));
+  transition: transform 0.3s ease-in-out;
+}
+
+.simpleIcon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(8px 8px 5px rgba(255, 255, 255, 0.3));
 }
 
 #title-foot {

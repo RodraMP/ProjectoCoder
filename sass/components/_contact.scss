@@ -5,16 +5,17 @@
     grid-template-areas:
         "header header"
         "menu content"
-        "footer footer";
+        "menu footer";
     grid-template-columns: 1fr 3fr;
     margin-top: 100px;
     gap: 5px;
-    background-color: white;
+    background-color: $bg-color;
     padding: 5px;
 }
 
 .contactContainer>div {
-    background-color: white;
+    @include titleFont;
+    background-color: $bg-color;
     padding: 10px;
     margin: 15px;
 }
@@ -22,11 +23,17 @@
 .contactContainer>div.contactHeader {
     grid-area: header;
     text-align: center;
-    color: cyan;
 }
 
 .contactContainer>div.contactMenu {
     grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    padding:10px;
 }
 
 .contactContainer>div.contactContent {
@@ -51,4 +58,55 @@ iframe {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+.reviewContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 180px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.reviewContainer p,
+.reviewContainer a {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    text-decoration: none;
+    color: $titleColor;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    transition: all 0.6s ease-in-out;
+}
+
+.reviewContainer a:hover {
+    color: $hoverFontColor;
+    transform: translateX(4px);
+}
+
+.modalContact {
+    background-color: silver;
+    color: $fontColor;
+}
+
+.modalItemContact {
+    background-color: silver;
+    color: black;
+}
+
+.formControl {
+    background-color: grey;
+    border-color: $fontColor;
+    color: $fontColor;
+    transition: background-color 0.3s ease;
+}
+
+.formControl:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: silver !important;
+    border-color: $fontColor !important;
+    color: black !important;
 }
