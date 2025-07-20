@@ -33,7 +33,7 @@
     align-items: center;
     text-align: center;
     font-size: 15px;
-    padding:10px;
+    padding: 10px;
 }
 
 .contactContainer>div.contactContent {
@@ -109,4 +109,39 @@ iframe {
     background-color: silver !important;
     border-color: $fontColor !important;
     color: black !important;
+}
+
+@media (max-width: 768px) {
+    .contactContainer>div.contactMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 5px;
+        gap: 2px;
+        margin: 5px;
+    }
+
+    .contactContainer>div.contactContent {
+        margin: 5px;
+        padding: 5px 5px;
+        gap: 2px;
+    }
+
+    .contactContainer>div.contactMenu a {
+        font-size: 10px;
+    }
+
+    .form-control {
+        font-size: 12px;
+    }
+    .form-select {
+        font-size: 12px;
+    }
+
+    .simpleIcon {
+        padding: 8px 8px;
+        max-width: 50px;
+        height: auto;
+    }
+
 }
